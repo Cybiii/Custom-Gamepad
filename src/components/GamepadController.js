@@ -78,40 +78,40 @@ const GamepadController = () => {
             <div className="flex flex-col items-center gap-4">
               <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-2">Controller</h3>
               <div className="relative w-40 h-40 flex items-center justify-center">
-                {/* Y Button - Top */}
+                {/* Y Button - Up Arrow */}
                 <div className="absolute -top-2 left-1/2 transform -translate-x-1/2">
                   <GamepadButton
-                    label="Y"
+                    label="↑"
                     color="button-y"
                     isPressed={buttonStates.Y}
                     position="top"
                   />
                 </div>
                 
-                {/* A Button - Bottom */}
+                {/* A Button - Down Arrow */}
                 <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2">
                   <GamepadButton
-                    label="A"
+                    label="↓"
                     color="button-a"
                     isPressed={buttonStates.A}
                     position="bottom"
                   />
                 </div>
                 
-                {/* X Button - Left */}
+                {/* X Button - Left Arrow */}
                 <div className="absolute -left-2 top-1/2 transform -translate-y-1/2">
                   <GamepadButton
-                    label="X"
+                    label="←"
                     color="button-x"
                     isPressed={buttonStates.X}
                     position="left"
                   />
                 </div>
                 
-                {/* B Button - Right */}
+                {/* B Button - Right Arrow */}
                 <div className="absolute -right-2 top-1/2 transform -translate-y-1/2">
                   <GamepadButton
-                    label="B"
+                    label="→"
                     color="button-b"
                     isPressed={buttonStates.B}
                     position="right"
@@ -141,23 +141,31 @@ const GamepadController = () => {
 
         {/* Button Status Display */}
         <div className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4">
-          {Object.entries(buttonStates).map(([button, isPressed]) => (
-            <div
-              key={button}
-              className={`p-3 rounded-lg border-2 transition-all ${
-                isPressed
-                  ? 'bg-green-100 border-green-400 shadow-lg transform scale-105'
-                  : 'bg-gray-50 border-gray-300'
-              }`}
-            >
-              <div className="text-center">
-                <div className={`text-lg font-bold ${isPressed ? 'text-green-700' : 'text-gray-700'}`}>{button}</div>
-                <div className={`text-sm ${isPressed ? 'text-green-600' : 'text-gray-500'}`}>
-                  {isPressed ? 'PRESSED' : 'Released'}
+          {Object.entries(buttonStates).map(([button, isPressed]) => {
+            const arrowMap = {
+              'Y': '↑',
+              'A': '↓', 
+              'X': '←',
+              'B': '→'
+            };
+            return (
+              <div
+                key={button}
+                className={`p-3 rounded-lg border-2 transition-all ${
+                  isPressed
+                    ? 'bg-green-100 border-green-400 shadow-lg transform scale-105'
+                    : 'bg-gray-50 border-gray-300'
+                }`}
+              >
+                <div className="text-center">
+                  <div className={`text-lg font-bold ${isPressed ? 'text-green-700' : 'text-gray-700'}`}>{arrowMap[button]}</div>
+                  <div className={`text-sm ${isPressed ? 'text-green-600' : 'text-gray-500'}`}>
+                    {isPressed ? 'PRESSED' : 'Released'}
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </div>
