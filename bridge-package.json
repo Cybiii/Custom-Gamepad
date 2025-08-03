@@ -1,0 +1,17 @@
+{
+  "name": "arduino-keyboard-bridge",
+  "version": "1.0.0",
+  "description": "Bridge Arduino gamepad to keyboard inputs",
+  "main": "arduino-keyboard-bridge.js",
+  "scripts": {
+    "start": "node arduino-keyboard-bridge.js",
+    "install-deps": "npm install serialport robotjs"
+  },
+  "dependencies": {
+    "serialport": "^12.0.0",
+    "robotjs": "^0.6.0"
+  },
+  "keywords": ["arduino", "gamepad", "keyboard", "bridge"],
+  "author": "Arduino Gamepad Bridge",
+  "license": "MIT"
+}
