@@ -74,68 +74,21 @@ const GamepadController = () => {
           {/* Controller Layout */}
           <div className="grid grid-cols-3 gap-20 items-center justify-items-center">
             
-            {/* Left Side - D-Pad with Arrow Keys */}
+            {/* Left Side - XYAB Layout */}
             <div className="flex flex-col items-center gap-4">
-              <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-2">D-Pad</h3>
+              <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-2">Controller</h3>
               <div className="relative w-40 h-40 flex items-center justify-center">
-                {/* Up Arrow (Y Button) */}
+                {/* Y Button - Top */}
                 <div className="absolute -top-2 left-1/2 transform -translate-x-1/2">
                   <GamepadButton
-                    label="↑"
+                    label="Y"
                     color="button-y"
                     isPressed={buttonStates.Y}
                     position="top"
                   />
                 </div>
                 
-                {/* Down Arrow (X Button) */}
-                <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2">
-                  <GamepadButton
-                    label="↓"
-                    color="button-x"
-                    isPressed={buttonStates.X}
-                    position="bottom"
-                  />
-                </div>
-                
-                {/* Left Arrow Placeholder */}
-                <div className="absolute -left-2 top-1/2 transform -translate-y-1/2">
-                  <div className="w-16 h-16 bg-gray-200 rounded-full border-4 border-gray-400 flex items-center justify-center text-gray-600 text-xl font-bold shadow-md">
-                    ←
-                  </div>
-                </div>
-                
-                {/* Right Arrow Placeholder */}
-                <div className="absolute -right-2 top-1/2 transform -translate-y-1/2">
-                  <div className="w-16 h-16 bg-gray-200 rounded-full border-4 border-gray-400 flex items-center justify-center text-gray-600 text-xl font-bold shadow-md">
-                    →
-                  </div>
-                </div>
-                
-                {/* D-Pad Center - Empty */}
-              </div>
-            </div>
-
-            {/* Center - Empty Space */}
-            <div className="flex flex-col items-center gap-6">
-              {/* Empty center area */}
-            </div>
-
-            {/* Right Side - Action Buttons (B and A) */}
-            <div className="flex flex-col items-center gap-4">
-              <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-2">Action</h3>
-              <div className="relative w-40 h-40 flex items-center justify-center">
-                {/* B Button (Top) */}
-                <div className="absolute -top-2 left-1/2 transform -translate-x-1/2">
-                  <GamepadButton
-                    label="B"
-                    color="button-b"
-                    isPressed={buttonStates.B}
-                    position="top"
-                  />
-                </div>
-                
-                {/* A Button (Bottom) */}
+                {/* A Button - Bottom */}
                 <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2">
                   <GamepadButton
                     label="A"
@@ -145,21 +98,38 @@ const GamepadController = () => {
                   />
                 </div>
                 
-                {/* Action Buttons Placeholders */}
+                {/* X Button - Left */}
                 <div className="absolute -left-2 top-1/2 transform -translate-y-1/2">
-                  <div className="w-16 h-16 bg-gray-700 rounded-full border-4 border-gray-500 flex items-center justify-center text-gray-300 text-xl font-bold shadow-md">
-                    X
-                  </div>
+                  <GamepadButton
+                    label="X"
+                    color="button-x"
+                    isPressed={buttonStates.X}
+                    position="left"
+                  />
                 </div>
                 
+                {/* B Button - Right */}
                 <div className="absolute -right-2 top-1/2 transform -translate-y-1/2">
-                  <div className="w-16 h-16 bg-gray-700 rounded-full border-4 border-gray-500 flex items-center justify-center text-gray-300 text-xl font-bold shadow-md">
-                    Y
-                  </div>
+                  <GamepadButton
+                    label="B"
+                    color="button-b"
+                    isPressed={buttonStates.B}
+                    position="right"
+                  />
                 </div>
                 
-                {/* Action Center - Empty */}
+                {/* Center - Empty */}
               </div>
+            </div>
+
+            {/* Center - Empty Space */}
+            <div className="flex flex-col items-center gap-6">
+              {/* Empty center area */}
+            </div>
+
+            {/* Right Side - Empty for symmetry */}
+            <div className="flex flex-col items-center gap-4">
+              {/* Empty right side */}
             </div>
           </div>
 
