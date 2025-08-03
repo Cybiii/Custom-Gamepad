@@ -1,6 +1,6 @@
-# Custom Xbox Gamepad UI
+# Custom Gamepad with UI
 
-A React-based user interface for visualizing button presses from your Arduino Nano custom gamepad controller.
+A React-based user interface for visualizing button presses from your Arduino Nano custom gamepad controller (to cheat on sf6/injustice/friday night funkin).
 
 ## Features
 
