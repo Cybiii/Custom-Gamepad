@@ -1,6 +1,6 @@
 # Custom Gamepad with UI
 
-A React-based user interface for visualizing button presses from your Arduino Nano custom gamepad controller (to cheat on sf6/injustice/friday night funkin).
+A React-based user interface for visualizing button presses from your Arduino Nano custom gamepad controller (to get gud on sf6/injustice/friday night funkin).
 
 ## Features
 
