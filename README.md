@@ -2,6 +2,8 @@
 
 A React-based user interface for visualizing button presses from your Arduino Nano custom gamepad controller (to get gud on sf6/injustice/friday night funkin).
 
+https://github.com/user-attachments/assets/958c1923-6562-4dec-a42f-69fd0d66868a
+
 ## Features
 
 - Real-time visualization of X, Y, A, B button presses
