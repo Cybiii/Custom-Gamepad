@@ -1,6 +1,6 @@
-# Custom Gamepad with UI
+# Custom Gamepad
 
-A React-based user interface for visualizing button presses from an Arduino based gamepad controller (to get gud on sf6/injustice/friday night funkin).
+Custom Arduino based gamepad controller (to get gud on sf6/injustice/friday night funkin).
 
 https://github.com/user-attachments/assets/958c1923-6562-4dec-a42f-69fd0d66868a
 
